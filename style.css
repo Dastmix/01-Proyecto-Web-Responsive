@@ -3,6 +3,12 @@
     src: url("./assets/font/helvetica/HelveticaNeueCyr-Medium.ttf") format("truetype");
 }
 
+:root {
+    --asideblue: #4766ff;
+    --asidegreen: #7aa68f;
+    --footercream: #f1edec;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -95,13 +101,15 @@ body {
 
 .edicion-limitada > img {
     width: 100%; 
+    position: relative;
 }
 
 .limited-container {
     display: block;
     position: absolute;
-    top: 90%;
-    left: 5%;
+    right: 40px;
+    left: 40px;
+    bottom: 40px;
 }
 
 .limited-container > h2 {
@@ -145,6 +153,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    position: relative;
 }
 
 .img-compra-ahora {
@@ -152,6 +161,27 @@ body {
     width: 100%;
 }
 
+.compra-a1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+    
+}
+
+.compra-a2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 1350px;
+    bottom: 80px;
+    
+}
 /* .aside {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -169,7 +199,7 @@ body {
 }
 
 .contenedor-aside1 {
-    background-color: #4766ff;
+    background-color: var(--asideblue);
     min-height: 33%;
     font-size: 30px;
     padding: 100px;
@@ -208,7 +238,7 @@ body {
 }
 
 .contenedor-aside3 {
-    background-color: #7aa68f;
+    background-color: var(--asidegreen);
     font-size: 30px;
     padding: 100px;
     min-height: 33%;
@@ -220,4 +250,351 @@ body {
 
 .contenedor-aside3 p {
     margin-bottom: 50px;
+}
+
+.contacta {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: var(--footercream);
+    color: black;
+    padding: 5em;
+}
+
+.contacta div {
+    font-size: 22px;
+}
+
+.contacta input {
+    font-size: 30px;
+    width: 450px;
+    margin-top: 50px;
+    border: none;
+    background-color: var(--footercream);
+    border-bottom: 1px solid #646464;
+}
+
+.siguenos img {
+    width: 40px;
+    margin: 40px 20px 20px 0;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 2500px)  {
+
+/* LIMITED EDITION */
+.limited-container {
+    right: 240px;
+    bottom: 500px;  
+}
+}
+/* Compra ahora */
+.contenedor-compra-ahora{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+.compra-a1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    left: 80px;
+    bottom: 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    /* Header */
+
+.navegacion {
+    display: grid;
+    grid-template-columns: 1fr 1.9fr 1.1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    position: relative;
+}
+
+.secciones {
+    display: none;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 55px;
+    font-weight: 1000;
+    margin-left: 50px;
+}
+
+.buscador {
+    display: none;
+}
+
+.buscador > input {
+    display: none;
+}
+
+.buscador > img {
+    display: none;
+}
+
+.client {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-img {
+    width: 40px;
+    padding: 30px;
+}
+
+    /* LIMITED EDITION */
+    .limited-container {
+        right: 480px;
+        bottom: 630px;  
+    }
+
+    .limited-container > h2 {
+        font-size: 50px;
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .limited-p {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    
+    .limited-a {
+        font-size: 20px;
+    }
+
+    /* Compra ahora */
+    .compra-a1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+    }
+
+    /* Aside */
+    .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 0;
+        -ms-layout-grid: fixed;
+    }
+
+    /* Footer */
+    .contacta {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        background-color: var(--footercream);
+        color: black;
+        padding: 5em;
+    }
+    }
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+
+    /* Header */
+
+    .navegacion {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.9fr 1.1fr 1fr;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        position: relative;
+    }
+
+    .secciones {
+        display: none;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 55px;
+        font-weight: 1000;
+    }
+    
+    .buscador {
+        display: none;
+    }
+    
+    .buscador > input {
+        display: none;
+    }
+    
+    .buscador > img {
+        display: none;
+    }
+    
+    .client {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 30px;
+    }
+    
+    .client-img {
+        width: 40px;
+        padding: 30px;
+    }
+
+    /* LIMITED EDITION */
+    .limited-container {
+        bottom: 800px;  
+        display: flex;
+    }
+
+    .limited-container > h2 {
+        font-size: 20px;
+        padding-bottom: 0.3em;
+    }
+    
+    .limited-p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .limited-a {
+        font-size: 15px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Encuentra tienda */
+    .encuentra-tienda {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .encuentra-tienda > a {
+        font-size: 25px;
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* Compra ahora */
+    .compra-a1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+    }
+
+    /* Aside */
+    .aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        column-gap: 0;
+        -ms-layout-grid: fixed;
+    }
+
+    .contenedor-aside1 {
+        background-color: var(--asideblue);
+        min-height: 33%;
+        font-size: 20px;
+        padding: 80px;
+    }
+    .contenedor-aside1 h2 {
+        margin-bottom: 10px;
+    }
+    
+    .contenedor-aside1 p {
+        margin-bottom: 25px;
+    }
+    
+    .contenedor-aside2 {
+        background-color: black;
+        font-size: 20px;
+        padding: 80px;
+        min-height: 33%;
+    }
+    
+    .contenedor-aside2 h2 {
+        margin-bottom: 10px;
+    }
+    
+    .contenedor-aside2 p {
+        margin-bottom: 25px;
+    }
+    
+    .contenedor-aside3 {
+        background-color: var(--asidegreen);
+        font-size: 20px;
+        padding: 80px;
+        min-height: 33%;
+    }
+    
+    .contenedor-aside3 h2 {
+        margin-bottom: 10px;
+    }
+    
+    .contenedor-aside3 p {
+        margin-bottom: 25px;
+    }
+
+    .contenedor-aside1 > .limited-a {
+        font-size: 0px;
+    }
+    .contenedor-aside2 > .limited-a {
+        font-size: 0px;
+    }
+    .contenedor-aside3 > .limited-a {
+        font-size: 0px;
+    }
+    /* Footer */
+    .contacta {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        background-color: var(--footercream);
+        color: black;
+    }
+    .contacta div {
+        font-size: 16px;
+    }
+    
+    .contacta input {
+        font-size: 24px;
+        width: 350px;
+        margin-top: 25px;
+        border: none;
+        background-color: var(--footercream);   
+        border-bottom: 1px solid #646464;
+    }
 }

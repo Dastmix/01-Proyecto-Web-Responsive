@@ -267,7 +267,7 @@ body {
     margin: 40px 20px 20px 0;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1980px)  {
+@media screen and (min-width: 1080px) and (max-width: 1920px)  {
 
 /* LIMITED EDITION */
 .edicion-limitada {
@@ -329,7 +329,7 @@ body {
 }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1080px) {
 
     /* Header */
 
@@ -428,7 +428,6 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: center;
     }
     
     /* Footer */
